@@ -13,7 +13,6 @@ const Home: NextPage = () => {
       <header>
       <Header/>
       </header>
-      <h1 className='mt-[40%] text-center text-6xl'>KING BOB</h1>
     </div>
   )
 }
