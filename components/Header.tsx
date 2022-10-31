@@ -8,6 +8,7 @@ type Props = {}
 const Header = (props: Props) => {
   // Pour le hamburger (navbar)
   const [isOpen, setOpen] = useState(false)
+  const [bob, setBob] = useState(false)
 
   const h1Variants = {
     hidden: {
@@ -65,19 +66,28 @@ const Header = (props: Props) => {
     window.addEventListener('scroll', handleScroll);
   })
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBob(!bob)
+      console.log(bob);
+    }, 2000);
+  
+    return () => clearInterval(interval);
+  }, []);
+
   return (
 
     <>
     <AnimatePresence>
       { visible && 
-      <motion.div className='fixed top-0 w-full z-10 '
+      <motion.div className='fixed top-0 w-full z-20 '
       variants={navVariants}
         initial="hidden"
         animate="visible"
         exit="exit"
       >
         <div className='flex justify-between w-[90%] p-8 mx-auto items-center   '>
-          <h2 >logo</h2>
+          <h2>logo</h2>
           <div className='cursor-pointer'>
             <Squash toggled={isOpen} toggle={setOpen} color="white" />
           </div>
@@ -86,7 +96,7 @@ const Header = (props: Props) => {
       } 
       </AnimatePresence>
       <AnimatePresence>
-        {isOpen && <Navbar />}
+        {isOpen && <Navbar handleClick={() =>setOpen(false)} />}
       </AnimatePresence>
 
       <motion.h1 className='text-4xl font-bold text-white mt-40 w-[90%] text-center  mx-auto md:text-5xl lg:text-6xl'
