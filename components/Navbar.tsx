@@ -73,7 +73,7 @@ const Navbar = ({handleClick}: Props) => {
             animate="visible"
             exit="exit">
                 
-                <motion.ul className='flex flex-col mx-auto items-center justify-center w-full space-y-12 '>
+                <motion.ul className='flex flex-col mx-auto items-center justify-center w-full space-y-6 '>
 
                     {liContent.map((li, id) => {
                         return (
