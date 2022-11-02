@@ -1,8 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import About from '../components/About'
 import Canva from '../components/Canva'
 import Header from '../components/Header'
-import Peer from '../components/Peer'
+
 
 
 
@@ -21,7 +22,7 @@ const Home: NextPage = () => {
       <div className='  h-[700px]   !mx-auto'>
       <Canva />
       </div>
-      <Peer/>
+      <About/>
       <h1 id='About' className='mt-[6000px]'>test</h1>
     </div>
 
