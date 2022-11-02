@@ -8,7 +8,7 @@
 @layer base {
     body {
         font-family: "Roboto Mono";
-        @apply bg-slate-400
+        @apply bg-[#43484c]
     }
 }
 

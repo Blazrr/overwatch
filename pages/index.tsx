@@ -1,14 +1,16 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import Canva from '../components/Canva'
 import Header from '../components/Header'
 import Peer from '../components/Peer'
 
 
+
 const Home: NextPage = () => {
   return (
-    <div className="h-[300vh]">
+    <>
+
+    <div className="">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -20,9 +22,10 @@ const Home: NextPage = () => {
       <Canva />
       </div>
       <Peer/>
-      <h1 className='text-4xl'>fewf</h1>
-      <h1 id='About' className='mt-[2000px]'>test</h1>
+      <h1 id='About' className='mt-[6000px]'>test</h1>
     </div>
+
+    </>
   )
 }
 

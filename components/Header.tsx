@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { Squash as Hamburger, Squash } from 'hamburger-react'
-import { globalAgent } from 'http'
 import Navbar from './Navbar'
 import { motion, AnimatePresence } from "framer-motion"
+
+
+
 type Props = {}
 
 const Header = (props: Props) => {
   // Pour le hamburger (navbar)
   const [isOpen, setOpen] = useState(false)
-  const [bob, setBob] = useState(false)
+
 
   const h1Variants = {
     hidden: {
@@ -66,14 +68,7 @@ const Header = (props: Props) => {
     window.addEventListener('scroll', handleScroll);
   })
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setBob(!bob)
-      console.log(bob);
-    }, 2000);
-  
-    return () => clearInterval(interval);
-  }, []);
+
 
   return (
 
@@ -99,7 +94,7 @@ const Header = (props: Props) => {
         {isOpen && <Navbar handleClick={() =>setOpen(false)} />}
       </AnimatePresence>
 
-      <motion.h1 className='text-4xl font-bold text-white mt-40 w-[90%] text-center  mx-auto md:text-5xl lg:text-6xl'
+      <motion.h1 className='text-4xl font-bold text-[#f99e1a] mt-40 w-[90%] text-center  mx-auto md:text-5xl lg:text-6xl'
         variants={h1Variants}
         initial="hidden"
         animate="visible"
@@ -121,7 +116,6 @@ const Header = (props: Props) => {
         className='text-slate-6 w-[90%] text-center text-sm  mx-auto md:text-md lg:text-lg mt-4'>
         Our blockchain-enabled platform puts people at the centre of energy trading. You decide how much energy you save, share, or sell.
       </motion.p>
-
     </>
   )
 }
