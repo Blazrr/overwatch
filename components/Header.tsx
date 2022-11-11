@@ -99,7 +99,7 @@ const Header = (props: Props) => {
         initial="hidden"
         animate="visible"
       >
-        Empowering people to share trade save energy</motion.h1>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit</motion.h1>
 
       <motion.p
         variants={h1Variants}
@@ -114,7 +114,7 @@ const Header = (props: Props) => {
           },
         }}
         className='text-slate-6 w-[90%] text-center text-sm  mx-auto md:text-md lg:text-lg mt-4'>
-        Our blockchain-enabled platform puts people at the centre of energy trading. You decide how much energy you save, share, or sell.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, harum veniam? Deleniti id ratione dolorum natus, 
       </motion.p>
     </>
   )

@@ -18,10 +18,50 @@
     }
 
     .go{
-        @apply opacity-0 text-blue-300 group-hover/item:opacity-100 transition duration-500
+        @apply opacity-0 text-blue-300 group-hover/item:opacity-100 transition duration-500 !w-10 !h-10 relative
     }
 
     .socials{
         @apply cursor-pointer hover:text-blue-300 text-white h-6 w-6 transition
+    }
+
+    .logo-container{
+        overflow: hidden;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        transform: translateY(-50%);
+        margin-top: 8em;
+        
+    }
+
+    .logo{
+        @apply w-[80px] h-[80px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] relative 
+    }
+
+    .logo-div{
+        display: flex;
+        
+    }
+ 
+
+    .imageStyle{
+       @apply mr-4
+    }
+ 
+
+
+    .scroll{
+        white-space: nowrap;
+        animation: scrollTxt 14s linear infinite;
+    }
+
+    @keyframes scrollTxt {
+        0%{
+            transform: translate(-100%,0);
+        }
+        100%{
+            transform: translate(0,0);
+        }
     }
 }

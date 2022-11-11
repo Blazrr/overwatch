@@ -2,6 +2,7 @@ import React from 'react'
 import { FaTwitter, FaLinkedin, FaTelegram, FaYoutube } from "react-icons/fa"
 import {motion, AnimatePresence, Variants} from "framer-motion"
 import {Link} from "react-scroll"
+import Image from 'next/image'
 
 
 type Props = {
@@ -11,7 +12,7 @@ type Props = {
 const Navbar = ({handleClick}: Props) => {
 
  
-    const liContent = ["About","News", "Pricing", "Roadmap", "Pitch Deck", "Team", "Faq", "Contact"]
+    const liContent = ["About","playstyles", "E-Sport"]
 
     const navbarVariants : Variants = {
         hidden:{
@@ -67,7 +68,7 @@ const Navbar = ({handleClick}: Props) => {
 
 
     return (
-            <motion.div className='fixed flex w-full h-screen top-0 bg-purple-600 bg-opacity-60 z-10'
+            <motion.div className='fixed flex w-full h-screen top-0 bg-black bg-opacity-60 z-10'
             variants={navbarVariants}
             initial="hidden"
             animate="visible"
@@ -78,11 +79,17 @@ const Navbar = ({handleClick}: Props) => {
                     {liContent.map((li, id) => {
                         return (
                             <motion.div className='group flex group/item items-center space-x-4' variants={itemVariants} key={id}>
-                                <a className='go'>Go</a>
+                                <div className='go '>
+                                <Image src="https://i.pinimg.com/originals/7a/a1/ec/7aa1ec46754b58a4b28cf3b6b7e83897.png" fill object-fit alt="fre"/>
+                                </div>
+
                                 <Link  to={li} spy={true} smooth={true} offset={-100} duration={500} onClick={handleClick} >
                                 <li className='hoverLi'>{li}</li>
                                 </Link>
-                                <a className='go'>Go</a>
+                                
+                                <div className='go '>
+                                <Image src="https://i.pinimg.com/originals/7a/a1/ec/7aa1ec46754b58a4b28cf3b6b7e83897.png" fill object-fit alt="fre"/>
+                                </div>    
                             </motion.div>
                         )
                     })}
