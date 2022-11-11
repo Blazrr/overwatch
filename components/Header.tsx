@@ -99,7 +99,7 @@ const Header = (props: Props) => {
         initial="hidden"
         animate="visible"
       >
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit</motion.h1>
+        Please note that this site is still in build</motion.h1>
 
       <motion.p
         variants={h1Variants}
